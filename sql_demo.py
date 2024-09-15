@@ -3,12 +3,13 @@ import pymysql
 # Function to create a connection to the MySQL database
 def create_connection():
     return pymysql.connect(
-        host="localhost",  # Your MySQL server host
-        port=3306,          # Your MySQL server port
-        user="root",        # Your MySQL username
-        password="suthar1234@",  # Your MySQL password
-        database="userinfo" # Your MySQL database name
+        host="172.17.0.2",  # MySQL server host
+        #port=3306,                    # MySQL server port
+        user="root",                  # MySQL username
+        password="root",        # MySQL password
+        database="userinfo"           # MySQL database name
     )
+
 
 # Function to create a table to store usernames if it doesn't exist
 def create_table(connection):

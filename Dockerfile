@@ -2,8 +2,9 @@ FROM python
 
 WORKDIR /Docker-Demo-1/
 
-COPY ./api_demo.py .
+COPY ./sql_demo.py .
 
-RUN pip install requests
+RUN pip install pymysql
+RUN pip install cryptography
 
-CMD [ "python","api_demo.py" ]
+CMD [ "python","sql_demo.py" ]
